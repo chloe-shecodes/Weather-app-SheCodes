@@ -218,7 +218,11 @@ input::placeholder {
   width: 46px;
   height: 46px;
 }
-.github {
+.github-text {
+  text-align: center;
+  font-size: 10px;
   color: #b56e74;
-  font-size: 20px;
+}
+.github-link {
+  color: #b56e74;
 }
