@@ -1,9 +1,7 @@
 body {
   margin: 60px 175px 0 175px;
-
   font-family: "Quicksand", sans-serif;
 }
-
 span {
   display: contents;
   width: auto;
@@ -26,7 +24,6 @@ span {
 .col-search-current-location {
   padding: 0;
 }
-
 .search-current-location {
   margin: 0 0 0px 12px;
   width: 30px;
@@ -37,7 +34,6 @@ span {
   filter: invert(96%) sepia(4%) saturate(613%) hue-rotate(319deg)
     brightness(93%) contrast(114%);
 }
-
 .city-input {
   width: 100%;
   border: 2px solid #b56e74;
@@ -46,16 +42,13 @@ span {
   color: #b56e74;
   padding: 0 15px;
 }
-
 input:focus {
   outline: 2px solid #fdf0ec;
 }
-
 input::placeholder {
   color: #b56e74;
   font-weight: 400;
 }
-
 .col-search-input-button {
   padding: 0 12px 0 0;
 }
@@ -71,18 +64,15 @@ input::placeholder {
   color: #b56e74;
   border: 2px solid #b56e74;
 }
-
 .current-wrapper {
   border: 2px solid #fdf0ec;
   border-radius: 145px;
   background-color: #b56e74;
 }
-
 .current-city {
   font-size: 60px;
   font-weight: 500;
 }
-
 .current-time {
   font-size: 18px;
   margin-top: -8px;
@@ -101,20 +91,18 @@ input::placeholder {
   font-size: 80px;
   text-align: left;
   padding: 0;
+  margin-right: -20px;
 }
-
 .degrees-symbol {
   font-size: 80px;
   line-height: 1;
   height: 43px;
 }
-
 .metric-temp {
   font-size: 12px;
   line-height: 1;
   padding-left: 1px;
 }
-
 .celcius {
   font-size: 14px;
   font-weight: bold;
@@ -122,7 +110,6 @@ input::placeholder {
 .perceived-temperature {
   font-size: 11px;
 }
-
 .card {
   background: transparent;
   border: none;
@@ -133,7 +120,6 @@ input::placeholder {
   border: 2px solid #fdf0ec;
   background-color: #b56e74;
 }
-
 .card-body img {
   padding: 0;
   margin-top: 1px;
@@ -142,11 +128,9 @@ input::placeholder {
 .card-body p {
   margin-top: -3px;
 }
-
 .card-title {
   margin-bottom: 0;
 }
-
 .forecast-day1 {
   width: 130px;
   height: 130px;
@@ -157,12 +141,10 @@ input::placeholder {
 .forecast-day1 h5 {
   font-size: 22px;
 }
-
 .forecast-day1 img {
   width: 57px;
   height: 57px;
 }
-
 .forecast-day2 {
   width: 120px;
   height: 120px;
@@ -173,7 +155,6 @@ input::placeholder {
 .forecast-day2 h5 {
   font-size: 20px;
 }
-
 .forecast-day2 img {
   width: 54px;
   height: 54px;
@@ -202,12 +183,10 @@ input::placeholder {
 .forecast-day4 h5 {
   font-size: 16px;
 }
-
 .forecast-day4 img {
   width: 48px;
   height: 48px;
 }
-
 .forecast-day5 {
   width: 93px;
   height: 93px;
