@@ -12,8 +12,12 @@ span {
 .metric-temp:hover {
   cursor: pointer;
 }
-
-.container {
+.outer-container {
+  width: 600px;
+  margin: 10px auto;
+  text-align: right;
+}
+.inner-container {
   width: 600px;
   color: #fdf0ec;
   border: 7px solid #b56e74;
@@ -219,10 +223,11 @@ input::placeholder {
   height: 46px;
 }
 .github-text {
-  text-align: center;
   font-size: 10px;
   color: #b56e74;
 }
 .github-link {
   color: #b56e74;
+  font-size: 10px;
+  text-shadow: 1px 1px 2px #fdf0ec, 0 0 0.2em #b56e74;
 }
