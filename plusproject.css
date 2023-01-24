@@ -7,16 +7,19 @@ span {
   width: auto;
   text-align: left;
 }
+ul {
+  padding: 0;
+}
 .metric-temp:hover {
   cursor: pointer;
 }
 .outer-container {
-  width: 600px;
+  width: 580px;
   margin: 10px auto;
   text-align: right;
 }
 .inner-container {
-  width: 600px;
+  width: 580px;
   color: #fdf0ec;
   border: 7px solid #b56e74;
   outline: 1px solid #fdf0ec;
@@ -64,11 +67,6 @@ input::placeholder {
   color: #b56e74;
   border: 2px solid #b56e74;
 }
-.current-wrapper {
-  border: 2px solid #fdf0ec;
-  border-radius: 145px;
-  background-color: #b56e74;
-}
 .current-city {
   font-size: 60px;
   font-weight: 500;
@@ -78,34 +76,57 @@ input::placeholder {
   margin-top: -8px;
   margin-bottom: 8px;
 }
-.current-icon {
+.current-wrapper {
+  border: 2px solid #fdf0ec;
+  border-radius: 145px;
+  background-color: #b56e74;
+}
+
+.current-icon img {
   height: 150px;
   width: 150px;
-  padding: 0;
-  display: block;
-  margin: 0 auto;
-  margin-top: -28px;
 }
 .current-temperature {
-  line-height: 1;
   font-size: 80px;
-  text-align: left;
-  padding: 0;
-  margin-right: -20px;
+  line-height: 1;
 }
+.current-temperature li {
+  list-style: none;
+  text-align: right;
+}
+.current ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.description li {
+  list-style: none;
+  text-align: right;
+}
+
 .degrees-symbol {
   font-size: 80px;
-  line-height: 1;
   height: 43px;
 }
-.metric-temp {
-  font-size: 12px;
+.metrics ul {
+  text-align: left;
+  padding: 0;
+  margin-left: -20px;
+}
+.metrics li {
+  list-style: none;
+  text-align: left;
   line-height: 1;
-  padding-left: 1px;
+  padding: 0;
+  margin: 0;
 }
 .celcius {
   font-size: 14px;
   font-weight: bold;
+}
+
+.humid li {
+  list-style: none;
 }
 .perceived-temperature {
   font-size: 11px;

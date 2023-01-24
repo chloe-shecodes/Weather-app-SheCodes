@@ -48,53 +48,44 @@
             </div>
           </div>
         </form>
+        <div class="col-12 current-city" id="current-city">Lisbon</div>
+        <div class="col-12 current-time" id="current-time"></div>
         <br />
         <div class="current-wrapper">
-          <div class="col-12 current-city" id="current-city">Lisbon</div>
-          <div class="col-12 current-time" id="current-time"></div>
+          <div class="container text-center">
+            <div class="row align-items-center">
+              <div class="col d-flex">
+                <ul class="humid">
+                  <li>humid</li>
+                  <li>wind</li>
+                </ul>
+              </div>
 
-          <div class="row">
-            <div class="col-6">
-              <div class="row">
-                <img src="icons/sunny.png" alt="sun" class="current-icon" />
+              <div class="col current-icon">
+                <img src="icons/sunny.png" alt="sun" />
               </div>
-            </div>
-            <div class="col-6">
-              <div class="row">
-                <div
-                  class="col-4 current-temperature"
-                  id="current-temp"
-                  type="number"
-                >
-                  21
+              <div class="col d-flex">
+                <div class="current">
+                  <ul>
+                    <li
+                      class="col current-temperature"
+                      id="current-temp"
+                      type="number"
+                    >
+                      21
+                    </li>
+                    <li class="description"><em>sunny with wind</em></li>
+                  </ul>
                 </div>
-                <div class="col-2">
-                  <div class="row degrees-symbol">°</div>
-                  <div class="row metric-temp">
-                    <span class="celcius" id="celcius">C</span><span> | </span
-                    ><span id="fahrenheit">F</span>
-                  </div>
-                </div>
-              </div>
-              <div class="row"><br /></div>
-              <div class="row perceived-temperature">
-                <div class="col-5">
-                  <div class="row">
-                    Feels like <span id="feeling-temp">19</span>°
-                  </div>
-                  <div class="row">
-                    Min: <span id="min-temp">10</span>° - Max:
-                    <span id="max-temp">30</span>°
-                  </div>
-                </div>
-                <div class="col-7">
-                  <div class="row" id="humidity">Humidity: 63%</div>
-                  <div class="row" id="wind">Wind: 5.60 km/h</div>
+                <div class="col metrics">
+                  <ul>
+                    <li class="degrees-symbol">°</li>
+                    <li>C | F</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row"><br /></div>
         </div>
         <div class="forecast">
           <div class="card" style="width: 18rem">
