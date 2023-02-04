@@ -30,16 +30,20 @@ function showCurrentWeather(response) {
   cityHeader.innerHTML = requestedCity;
   let currentTemp = document.querySelector("#current-temp");
   currentTemp.innerHTML = Math.round(response.data.main.temp);
-  let feelingTemp = document.querySelector("#feeling-temp");
-  feelingTemp.innerHTML = Math.round(response.data.main.feels_like);
-  let minTemp = document.querySelector("#min-temp");
-  minTemp.innerHTML = Math.round(response.data.main.temp_min);
-  let maxTemp = document.querySelector("#max-temp");
-  maxTemp.innerHTML = Math.round(response.data.main.temp_max);
-  let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = `Humidity: ${Math.round(response.data.main.humidity)}%`;
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.weather[0].description;
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  wind.innerHTML = ` ${Math.round(response.data.wind.speed)}`;
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = ` ${Math.round(response.data.main.humidity)}`;
+
+  //let feelingTemp = document.querySelector("#feeling-temp");
+  //feelingTemp.innerHTML = Math.round(response.data.main.feels_like);
+  //let minTemp = document.querySelector("#min-temp");
+  //minTemp.innerHTML = Math.round(response.data.main.temp_min);
+  //let maxTemp = document.querySelector("#max-temp");
+  //maxTemp.innerHTML = Math.round(response.data.main.temp_max);
+  console.log(response.data);
 }
 
 // function for api-call on city input

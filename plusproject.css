@@ -1,6 +1,3 @@
-div {
-  border: 1px solid blue;
-}
 a {
   text-decoration: none;
   color: #fdf0ec;
@@ -74,8 +71,8 @@ input::placeholder {
 }
 .current-time {
   font-size: 18px;
-  margin-top: -18px;
-  margin-bottom: 10px;
+  margin-top: -12px;
+  margin-bottom: 5px;
   color: #e7b5bb;
 }
 .current-wrapper {
@@ -84,33 +81,26 @@ input::placeholder {
   background-color: #b56e74;
 }
 
-.current-icon {
-  width: 190px;
-}
-.current-icon img {
-  height: 125px;
-  width: 125px;
-  margin-left: 34px;
-  margin-top: -10px;
-}
-
 .current-temperature {
   font-size: 80px;
   line-height: 1;
-  padding-left: 35px;
+  padding-left: 45px;
 }
 
 .metrics ul {
   list-style: none;
   text-align: left;
   padding: 0;
-
   line-height: 1;
 }
 
 .degrees-symbol {
   font-size: 80px;
   height: 43px;
+}
+.current-icon img {
+  height: 125px;
+  width: 125px;
 }
 
 .elements li {
@@ -130,6 +120,7 @@ input::placeholder {
   list-style: none;
   text-align: right;
 }
+
 .card {
   background: transparent;
   border: none;
@@ -226,7 +217,8 @@ input::placeholder {
   color: #b56e74;
 }
 .github-link {
-  color: #b56e74;
+  color: #fdf0ec;
   font-size: 10px;
-  text-shadow: 1px 1px 2px #fdf0ec, 0 0 0.2em #b56e74;
+
+  background-color: #b56e74;
 }
