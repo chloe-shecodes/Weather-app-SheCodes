@@ -7,9 +7,7 @@ span {
   width: auto;
   text-align: left;
 }
-ul {
-  padding: 0;
-}
+
 .metric-temp:hover {
   cursor: pointer;
 }
@@ -24,10 +22,9 @@ ul {
   border: 7px solid #b56e74;
   outline: 1px solid #fdf0ec;
 }
-.col-search-current-location {
-  padding: 0;
-}
+
 .search-current-location {
+  padding-right: 3px;
   margin: 0 0 0px 12px;
   width: 30px;
   filter: invert(88%) sepia(2%) saturate(3945%) hue-rotate(306deg)
@@ -53,7 +50,7 @@ input::placeholder {
   font-weight: 400;
 }
 .col-search-input-button {
-  padding: 0 12px 0 0;
+  padding: 0 15px 0 0;
 }
 .search-input-button {
   width: 100%;
@@ -73,8 +70,9 @@ input::placeholder {
 }
 .current-time {
   font-size: 18px;
-  margin-top: -8px;
-  margin-bottom: 8px;
+  margin-top: -18px;
+  margin-bottom: 10px;
+  color: #e7b5bb;
 }
 .current-wrapper {
   border: 2px solid #fdf0ec;
@@ -82,54 +80,55 @@ input::placeholder {
   background-color: #b56e74;
 }
 
-.current-icon img {
-  height: 150px;
-  width: 150px;
+.current-icon {
+  width: 190px;
 }
+.current-icon img {
+  height: 125px;
+  width: 125px;
+  margin-left: 34px;
+  margin-top: -10px;
+}
+
 .current-temperature {
   font-size: 80px;
   line-height: 1;
+  padding-left: 35px;
 }
-.current-temperature li {
+
+.metrics ul {
   list-style: none;
-  text-align: right;
-}
-.current ul {
-  list-style: none;
+  text-align: left;
   padding: 0;
-  margin: 0;
-}
-.description li {
-  list-style: none;
-  text-align: right;
+
+  line-height: 1;
 }
 
 .degrees-symbol {
   font-size: 80px;
   height: 43px;
 }
-.metrics ul {
-  text-align: left;
-  padding: 0;
-  margin-left: -20px;
-}
-.metrics li {
-  list-style: none;
-  text-align: left;
-  line-height: 1;
-  padding: 0;
-  margin: 0;
-}
+
 .celcius {
   font-size: 14px;
   font-weight: bold;
 }
 
-.humid li {
+.elements li {
   list-style: none;
+  text-align: left;
+  line-height: 1.75;
+  color: #e7b5bb;
+  margin-left: -25px;
 }
-.perceived-temperature {
-  font-size: 11px;
+.elements img {
+  filter: invert(88%) sepia(2%) saturate(3945%) hue-rotate(306deg)
+    brightness(86%) contrast(104%);
+  width: 15px;
+}
+.description li {
+  list-style: none;
+  text-align: right;
 }
 .card {
   background: transparent;
