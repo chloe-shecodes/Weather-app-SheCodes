@@ -72,9 +72,11 @@ function changeToFahrenheit() {
   let celcius = document.querySelector("#celcius");
   let currentTemp = document.querySelector("#current-temp");
   fahrenheit.style.fontWeight = "bold";
-  fahrenheit.style.fontSize = "14px";
+  fahrenheit.style.fontSize = "16px";
+  fahrenheit.style.color = "#fdf0ec";
   celcius.style.fontWeight = "normal";
-  celcius.style.fontSize = "12px";
+  celcius.style.fontSize = "14px";
+  celcius.style.color = "#e7b5bb";
   currentTemp.innerHTML = 69;
 
   let feelingTemp = document.querySelector("#feeling-temp");
@@ -91,9 +93,11 @@ function changeToCelcius() {
   let celcius = document.querySelector("#celcius");
   let currentTemp = document.querySelector("#current-temp");
   celcius.style.fontWeight = "bold";
-  celcius.style.fontSize = "14px";
+  celcius.style.fontSize = "18px";
+  celcius.style.color = "#fdf0ec";
   fahrenheit.style.fontWeight = "normal";
-  fahrenheit.style.fontSize = "12px";
+  fahrenheit.style.fontSize = "14px";
+  fahrenheit.style.color = "#e7b5bb";
   currentTemp.innerHTML = 21;
 
   let feelingTemp = document.querySelector("#feeling-temp");

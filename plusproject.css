@@ -1,3 +1,10 @@
+div {
+  border: 1px solid blue;
+}
+a {
+  text-decoration: none;
+  color: #fdf0ec;
+}
 body {
   margin: 60px 175px 0 175px;
   font-family: "Quicksand", sans-serif;
@@ -8,9 +15,6 @@ span {
   text-align: left;
 }
 
-.metric-temp:hover {
-  cursor: pointer;
-}
 .outer-container {
   width: 580px;
   margin: 10px auto;
@@ -109,12 +113,8 @@ input::placeholder {
   height: 43px;
 }
 
-.celcius {
-  font-size: 14px;
-  font-weight: bold;
-}
-
 .elements li {
+  font-size: 15px;
   list-style: none;
   text-align: left;
   line-height: 1.75;
