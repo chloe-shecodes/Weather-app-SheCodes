@@ -1,6 +1,5 @@
 a {
   text-decoration: none;
-  color: #fdf0ec;
 }
 body {
   margin: 60px 175px 0 175px;
@@ -98,6 +97,20 @@ input::placeholder {
   font-size: 80px;
   height: 43px;
 }
+
+.metrics a {
+  text-decoration: none;
+  color: #e7b5bb;
+  font-size: 14px;
+}
+
+.metrics .active {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fdf0ec;
+  cursor: default;
+}
+
 .current-icon img {
   height: 150px;
   width: 150px;

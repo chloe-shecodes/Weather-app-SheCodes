@@ -30,6 +30,7 @@ function showCurrentWeather(response) {
   cityHeader.innerHTML = requestedCity;
   let currentTemp = document.querySelector("#current-temp");
   currentTemp.innerHTML = Math.round(response.data.temperature.current);
+  celciusTemperature = response.data.temperature.current;
   let description = document.querySelector("#description");
   description.innerHTML = response.data.condition.description;
   let wind = document.querySelector("#wind");
@@ -81,16 +82,11 @@ function getCurrentLocation(event) {
 
 //function to change to Fahrenheit
 function changeToFahrenheit() {
-  let fahrenheit = document.querySelector("#fahrenheit");
-  let celcius = document.querySelector("#celcius");
   let currentTemp = document.querySelector("#current-temp");
-  fahrenheit.style.fontWeight = "bold";
-  fahrenheit.style.fontSize = "16px";
-  fahrenheit.style.color = "#fdf0ec";
-  celcius.style.fontWeight = "normal";
-  celcius.style.fontSize = "14px";
-  celcius.style.color = "#e7b5bb";
-  currentTemp.innerHTML = 69;
+  celcius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheitTemp = Math.round((celciusTemperature * 9) / 5 + 32);
+  currentTemp.innerHTML = fahrenheitTemp;
 
   //let feelingTemp = document.querySelector("#feeling-temp");
   //let minTemp = document.querySelector("#min-temp");
@@ -102,16 +98,11 @@ function changeToFahrenheit() {
 
 //function to change to Celcius
 function changeToCelcius() {
-  let fahrenheit = document.querySelector("#fahrenheit");
-  let celcius = document.querySelector("#celcius");
   let currentTemp = document.querySelector("#current-temp");
-  celcius.style.fontWeight = "bold";
-  celcius.style.fontSize = "18px";
-  celcius.style.color = "#fdf0ec";
-  fahrenheit.style.fontWeight = "normal";
-  fahrenheit.style.fontSize = "14px";
-  fahrenheit.style.color = "#e7b5bb";
-  currentTemp.innerHTML = 21;
+  fahrenheit.classList.remove("active");
+  celcius.classList.add("active");
+  let celciusTemp = Math.round(celciusTemperature);
+  currentTemp.innerHTML = celciusTemp;
 
   //let feelingTemp = document.querySelector("#feeling-temp");
   //let minTemp = document.querySelector("#min-temp");
@@ -120,6 +111,16 @@ function changeToCelcius() {
   //minTemp.innerHTML = 10;
   //maxTemp.innerHTML = 30;
 }
+
+let celciusTemperature = null;
+
+// call function to change to Fahrenheit
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeToFahrenheit);
+
+// call function to change to Celcius
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", changeToCelcius);
 
 // call function for current day & time
 currentTime(new Date());
@@ -131,11 +132,3 @@ citySearchForm.addEventListener("submit", getInputCity);
 //call function to get current location on click
 let currentLocationButton = document.querySelector("#search-current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-// call function to change to Fahrenheit
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", changeToFahrenheit);
-
-// call function to change to Celcius
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", changeToCelcius);
