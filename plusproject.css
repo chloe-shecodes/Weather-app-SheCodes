@@ -120,6 +120,9 @@ input::placeholder {
   list-style: none;
   text-align: right;
 }
+.description:first-letter {
+  text-transform: uppercase;
+}
 
 .card {
   background: transparent;
