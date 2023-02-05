@@ -19,7 +19,7 @@ function currentTime(date) {
   if (currentMinutes < 10) {
     currentMinutes = `0${currentMinutes}`;
   }
-  currentTime.innerHTML = `${currentDay}, ${currentHour}:${currentMinutes}`;
+  currentTime.innerHTML = `Last updated: ${currentDay}, ${currentHour}:${currentMinutes}`;
 }
 
 //function to change weather info
@@ -31,6 +31,8 @@ function showCurrentWeather(response) {
   let currentTemp = document.querySelector("#current-temp");
   currentTemp.innerHTML = Math.round(response.data.temperature.current);
   celciusTemperature = response.data.temperature.current;
+  celcius.classList.add("active");
+  fahrenheit.classList.remove("active");
   let description = document.querySelector("#description");
   description.innerHTML = response.data.condition.description;
   let wind = document.querySelector("#wind");
