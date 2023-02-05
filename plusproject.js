@@ -36,6 +36,15 @@ function showCurrentWeather(response) {
   wind.innerHTML = ` ${Math.round(response.data.wind.speed)}`;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = ` ${Math.round(response.data.temperature.humidity)}`;
+  let currentIcon = document.querySelector("#current-icon");
+  currentIcon.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  currentIcon.setAttribute(
+    "alt",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.description}.png`
+  );
 
   //let feelingTemp = document.querySelector("#feeling-temp");
   //feelingTemp.innerHTML = Math.round(response.data.main.feels_like);
@@ -43,7 +52,7 @@ function showCurrentWeather(response) {
   //minTemp.innerHTML = Math.round(response.data.main.temp_min);
   //let maxTemp = document.querySelector("#max-temp");
   //maxTemp.innerHTML = Math.round(response.data.main.temp_max);
-  console.log(response.data);
+  console.log(response.data.condition.icon);
 }
 
 // function for api-call on city input

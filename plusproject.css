@@ -99,8 +99,10 @@ input::placeholder {
   height: 43px;
 }
 .current-icon img {
-  height: 125px;
-  width: 125px;
+  height: 150px;
+  width: 150px;
+
+  margin: -22px;
 }
 
 .elements li {
