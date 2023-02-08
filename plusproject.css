@@ -140,16 +140,13 @@ input::placeholder {
   border: 2px solid #fdf0ec;
   background-color: #b56e74;
 }
-.card-body img {
-  padding: 0;
-  margin-top: 1px;
-  margin-bottom: 1px;
-}
-.card-body p {
-  margin-top: -3px;
-}
-.card-title {
+
+.card-day {
   margin-bottom: 0;
+}
+
+.forecast-temp-min {
+  color: #e7b5bb;
 }
 .forecast-day1 {
   width: 130px;
