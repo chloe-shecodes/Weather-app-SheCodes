@@ -59,9 +59,14 @@ input::placeholder {
   color: #b56e74;
   border: 2px solid #b56e74;
 }
+
 .current-city {
   font-size: 60px;
   font-weight: 500;
+  padding: 0 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .current-time {
   font-size: 12px;
@@ -75,10 +80,16 @@ input::placeholder {
   background-color: #b56e74;
 }
 
+.current-degrees {
+  padding: 8px 0 0 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  text-align: right;
+}
+
 .current-temp {
   font-size: 70px;
   line-height: 1;
-  padding-left: 45px;
 }
 
 .metrics ul {
@@ -112,21 +123,36 @@ input::placeholder {
   margin: -22px;
 }
 
-.elements li {
-  font-size: 15px;
+.weather-elements {
+  padding-top: 9px;
+  padding-left: 0;
+}
+.weather-elements ul {
+  padding-left: 40px;
+}
+.weather-elements li {
+  display: flex;
+  align-items: baseline;
+  font-size: 13px;
   list-style: none;
   text-align: left;
-  line-height: 1.75;
+
   color: #e7b5bb;
   margin-left: -25px;
 }
-.elements img {
+.weather-elements img {
   filter: invert(88%) sepia(2%) saturate(3945%) hue-rotate(306deg)
     brightness(86%) contrast(104%);
-  width: 15px;
+  width: 13px;
+}
+.weather-elements span {
+  padding-left: 4px;
+}
+.humidity {
+  transform: scalex(-1);
 }
 
-.description:first-letter {
+.weather-description:first-letter {
   text-transform: uppercase;
 }
 

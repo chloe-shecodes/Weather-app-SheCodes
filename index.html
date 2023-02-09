@@ -54,49 +54,51 @@
           <div class="row align-items-center">
             <div class="col-12 current-city" id="current-city">Lisbon</div>
             <div class="col-12 current-time" id="current-time"></div>
-
-            <div class="col d-flex current">
-              <div>
-                <p class="col current-temp" id="current-temp">19</p>
+            <div class="row">
+              <div class="col current-degrees">
+                <div>
+                  <div class="col current-temp" id="current-temp">19</div>
+                </div>
+                <div class="col metrics">
+                  <ul>
+                    <li class="degrees-symbol">°</li>
+                    <li class="units">
+                      <a href="#" class="active" id="celcius">C</a> |
+                      <a href="#" id="fahrenheit">F</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="col metrics">
+              <div class="col current-icon">
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+                  alt=""
+                  id="current-icon"
+                />
+              </div>
+              <div class="col weather-elements">
                 <ul>
-                  <li class="degrees-symbol">°</li>
-                  <li class="units">
-                    <a href="#" class="active" id="celcius">C</a> |
-                    <a href="#" id="fahrenheit">F</a>
+                  <li>
+                    <img src="icons/anemometer.png" alt="anenometer" /><span
+                      id="wind"
+                    >
+                      15 km|h
+                    </span>
+                  </li>
+                  <li>
+                    <img
+                      src="icons/humidity2.png"
+                      alt="humidity"
+                      class="humidity"
+                    /><span id="humidity"> 24%</span>
+                  </li>
+                  <li><span>10°</span><span>| 30°</span></li>
+                  <li class="weather-description" id="description">
+                    sunny with wind
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col current-icon">
-              <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-                alt=""
-                id="current-icon"
-              />
-            </div>
-            <div class="col d-flex">
-              <ul class="elements">
-                <li class="description" id="description">sunny with wind</li>
-                <li>
-                  <img src="icons/anemometer.png" alt="anenometer" /><span
-                    id="wind"
-                  >
-                    15
-                  </span>
-                  km|h
-                </li>
-                <li>
-                  <img src="icons/humidity2.png" alt="humidity" /><span
-                    id="humidity"
-                  >
-                    24 </span
-                  >%
-                </li>
-              </ul>
-            </div>
-
             <div class="row"><br /></div>
           </div>
         </div>
@@ -104,7 +106,7 @@
         <div class="forecast">
           <div class="card" style="width: 18rem">
             <div class="card-body forecast-day1">
-              <h5 class="card-day">Mon</h5>
+              <h5 class="card-day" id="forecast-day">Mon</h5>
               <img src="icons/thunderstorms.png" alt="thunderstorms" />
               <div>
                 <span>15°</span> |
@@ -114,7 +116,7 @@
           </div>
           <div class="card" style="width: 18rem">
             <div class="card-body forecast-day2">
-              <h5 class="card-day">Tue</h5>
+              <h5 class="card-day" id="forecast-day">Tue</h5>
               <img src="icons/cloudy.png" alt="cloudy" />
               <div>
                 <span>25°</span> |
@@ -124,7 +126,7 @@
           </div>
           <div class="card" style="width: 18rem">
             <div class="card-body forecast-day3">
-              <h5 class="card-day">Wed</h5>
+              <h5 class="card-day" id="forecast-day">Wed</h5>
               <img src="icons/partly_cloudy.png" alt="partly cloudy" />
               <div>
                 <span>17°</span> |
@@ -134,7 +136,7 @@
           </div>
           <div class="card" style="width: 18rem">
             <div class="card-body forecast-day4">
-              <h5 class="card-day">Thu</h5>
+              <h5 class="card-day" id="forecast-day">Thu</h5>
               <img src="icons/sunny_s_cloudy.png" alt="sunny cloudy" />
               <div>
                 <span>9°</span> |
@@ -144,7 +146,7 @@
           </div>
           <div class="card" style="width: 18rem">
             <div class="card-body forecast-day5">
-              <h5 class="card-day">Fri</h5>
+              <h5 class="card-day" id="forecast-day">Fri</h5>
               <img src="icons/cloudy.png" alt="cloudy" />
               <div>
                 <span>20°</span> |

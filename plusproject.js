@@ -22,9 +22,35 @@ function currentTime(date) {
   currentTime.innerHTML = `Last updated: ${currentDay}, ${currentHour}:${currentMinutes}`;
 }
 
-//function to change weather info
+// work in progress
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+//function to show forecast - work in progress
+function showForecast(response) {
+  console.log(response.data.daily[0].time);
+  //let forecast = response.data.daily;
+  let forecastDay = document.querySelectorAll("#forecast-day");
+  forecastDay.forEach((forecastDay) => {
+    forecastDay.innerHTML = response.data.daily[0].time;
+  });
+}
+
+//function to get forecast
+function getForecast(city) {
+  let apiKey = "cd2bcfo5ae203b19202a5050tb1b3849";
+  let unit = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(showForecast);
+}
+
+//function to show current weather
 function showCurrentWeather(response) {
-  console.log(response.data);
   let requestedCity = response.data.city;
   let cityHeader = document.querySelector("#current-city");
   cityHeader.innerHTML = requestedCity;
@@ -36,9 +62,9 @@ function showCurrentWeather(response) {
   let description = document.querySelector("#description");
   description.innerHTML = response.data.condition.description;
   let wind = document.querySelector("#wind");
-  wind.innerHTML = ` ${Math.round(response.data.wind.speed)}`;
+  wind.innerHTML = ` ${Math.round(response.data.wind.speed)} km|h`;
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = ` ${Math.round(response.data.temperature.humidity)}`;
+  humidity.innerHTML = ` ${Math.round(response.data.temperature.humidity)} %`;
   let currentIcon = document.querySelector("#current-icon");
   currentIcon.setAttribute(
     "src",
@@ -49,16 +75,17 @@ function showCurrentWeather(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.description}.png`
   );
 
+  getForecast(response.data.city);
+
   //let feelingTemp = document.querySelector("#feeling-temp");
   //feelingTemp.innerHTML = Math.round(response.data.main.feels_like);
   //let minTemp = document.querySelector("#min-temp");
   //minTemp.innerHTML = Math.round(response.data.main.temp_min);
   //let maxTemp = document.querySelector("#max-temp");
   //maxTemp.innerHTML = Math.round(response.data.main.temp_max);
-  console.log(response.data.condition.icon);
 }
 
-// function for api-call on city input
+// function to get current weather on city input
 function getInputCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
@@ -68,7 +95,7 @@ function getInputCity(event) {
   axios.get(apiUrl).then(showCurrentWeather);
 }
 
-//function for api-call on current location
+//function to get current weather on current location
 function getCurrentLocation(event) {
   event.preventDefault();
   function showPosition(position) {
