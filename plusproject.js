@@ -22,7 +22,7 @@ function currentTime(date) {
   currentTime.innerHTML = `Last updated: ${currentDay}, ${currentHour}:${currentMinutes}`;
 }
 
-// work in progress
+// function to format forecast day
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -31,14 +31,20 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-//function to show forecast - work in progress
+//function to show forecast
 function showForecast(response) {
-  console.log(response.data.daily[0].time);
-  //let forecast = response.data.daily;
-  let forecastDay = document.querySelectorAll("#forecast-day");
-  forecastDay.forEach((forecastDay) => {
-    forecastDay.innerHTML = response.data.daily[0].time;
-  });
+  let forecast = response.data.daily;
+  for (let i = 0; i < forecast.length; i++) {
+    let day = document.querySelector(`#forecast-day${i + 1}`);
+    day.innerHTML = formatDay(forecast[i].time);
+    let icon = document.querySelector(`#icon-day${i + 1}`);
+    icon.src = forecast[i].condition.icon_url;
+    icon.alt = forecast[i].condition.icon;
+    let minTemp = document.querySelector(`#forecast-temp-min-day${i + 1}`);
+    minTemp.innerHTML = `${Math.round(forecast[i].temperature.minimum)}°`;
+    let maxTemp = document.querySelector(`#forecast-temp-max-day${i + 1}`);
+    maxTemp.innerHTML = `${Math.round(forecast[i].temperature.maximum)}°`;
+  }
 }
 
 //function to get forecast
@@ -62,7 +68,7 @@ function showCurrentWeather(response) {
   let description = document.querySelector("#description");
   description.innerHTML = response.data.condition.description;
   let wind = document.querySelector("#wind");
-  wind.innerHTML = ` ${Math.round(response.data.wind.speed)} km|h`;
+  wind.innerHTML = ` ${Math.round(response.data.wind.speed)}`;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = ` ${Math.round(response.data.temperature.humidity)} %`;
   let currentIcon = document.querySelector("#current-icon");
