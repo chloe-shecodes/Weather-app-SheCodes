@@ -37,6 +37,7 @@ body {
   color: #b56e74;
   padding: 0 15px;
 }
+
 input:focus {
   outline: 2px solid #fdf0ec;
 }

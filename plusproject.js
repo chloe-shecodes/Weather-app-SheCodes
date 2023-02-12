@@ -122,6 +122,9 @@ function getCurrentLocation(event) {
 
 //function to change to Fahrenheit
 function changeToFahrenheit() {
+  alert(
+    "Student at work! 👋🏼🤓 \nOnly the current temperature will be converted to Fahrenheit atm. Still lots to learn and more to come! 🤞🏼👩🏼‍💻"
+  );
   let currentTemp = document.querySelector("#current-temp");
   celcius.classList.remove("active");
   fahrenheit.classList.add("active");
