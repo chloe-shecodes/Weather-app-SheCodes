@@ -65,11 +65,16 @@ function showCurrentWeather(response) {
   celciusTemperature = response.data.temperature.current;
   celcius.classList.add("active");
   fahrenheit.classList.remove("active");
+
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = ` ${Math.round(response.data.wind.speed)} km|h`;
+  let humidity = document.querySelector("#humidity");
+  let feelslikeTemp = document.querySelector("#feels-like-temp");
+  feelslikeTemp.innerHTML = `feels like ${Math.round(
+    response.data.temperature.feels_like
+  )}°`;
   let description = document.querySelector("#description");
   description.innerHTML = response.data.condition.description;
-  let wind = document.querySelector("#wind");
-  wind.innerHTML = ` ${Math.round(response.data.wind.speed)}`;
-  let humidity = document.querySelector("#humidity");
   humidity.innerHTML = ` ${Math.round(response.data.temperature.humidity)} %`;
   let currentIcon = document.querySelector("#current-icon");
   currentIcon.setAttribute(
