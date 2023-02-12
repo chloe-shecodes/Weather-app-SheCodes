@@ -137,7 +137,6 @@ input::placeholder {
   font-size: 13px;
   list-style: none;
   text-align: left;
-
   color: #e7b5bb;
   margin-left: -25px;
 }
@@ -151,10 +150,6 @@ input::placeholder {
 }
 .humidity {
   transform: scalex(-1);
-}
-
-.weather-description:first-letter {
-  text-transform: uppercase;
 }
 
 .card {
@@ -198,7 +193,6 @@ input::placeholder {
 .forecast-day2 {
   display: grid;
   grid-template-rows: 15px 60px 15px;
-
   align-content: center;
   justify-content: center;
   align-items: center;
