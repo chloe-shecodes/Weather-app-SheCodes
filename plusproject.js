@@ -87,13 +87,6 @@ function showCurrentWeather(response) {
   );
 
   getForecast(response.data.city);
-
-  //let feelingTemp = document.querySelector("#feeling-temp");
-  //feelingTemp.innerHTML = Math.round(response.data.main.feels_like);
-  //let minTemp = document.querySelector("#min-temp");
-  //minTemp.innerHTML = Math.round(response.data.main.temp_min);
-  //let maxTemp = document.querySelector("#max-temp");
-  //maxTemp.innerHTML = Math.round(response.data.main.temp_max);
 }
 
 // function to get current weather on city input
@@ -130,13 +123,6 @@ function changeToFahrenheit() {
   fahrenheit.classList.add("active");
   let fahrenheitTemp = Math.round((celciusTemperature * 9) / 5 + 32);
   currentTemp.innerHTML = fahrenheitTemp;
-
-  //let feelingTemp = document.querySelector("#feeling-temp");
-  //let minTemp = document.querySelector("#min-temp");
-  //let maxTemp = document.querySelector("#max-temp");
-  //feelingTemp.innerHTML = 66;
-  //minTemp.innerHTML = 50;
-  //maxTemp.innerHTML = 86;
 }
 
 //function to change to Celcius
@@ -146,13 +132,6 @@ function changeToCelcius() {
   celcius.classList.add("active");
   let celciusTemp = Math.round(celciusTemperature);
   currentTemp.innerHTML = celciusTemp;
-
-  //let feelingTemp = document.querySelector("#feeling-temp");
-  //let minTemp = document.querySelector("#min-temp");
-  //let maxTemp = document.querySelector("#max-temp");
-  //feelingTemp.innerHTML = 19;
-  //minTemp.innerHTML = 10;
-  //maxTemp.innerHTML = 30;
 }
 
 let celciusTemperature = null;
